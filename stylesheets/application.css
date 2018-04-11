@@ -1,3 +1,8 @@
-/* canvas {
-    background-image: url(http://res.cloudinary.com/dcf4iyb6t/image/upload/v1523320487/Flappy%20Sheen/cloud_background.jpg);
-} */
+@font-face {
+    font-family: 'Press Start 2P';
+    src: url(/vendor/PressStart2P-Regular.ttf);
+}
+
+h1 {
+    font-family: 'Press Start 2P', cursive;
+}
