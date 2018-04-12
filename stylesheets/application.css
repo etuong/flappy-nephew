@@ -1,8 +1,27 @@
 @font-face {
     font-family: 'Press Start 2P';
-    src: url(/vendor/PressStart2P-Regular.ttf);
+    src: url('../vendor/PressStart2P-Regular.ttf');
 }
 
 h1 {
     font-family: 'Press Start 2P', cursive;
+    color: grey;
 }
+
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.header > h1 {
+    padding-top: 20px;
+}
+
+.header > img {
+    height: 109px;
+    width: 123px;
+}
+
+/* #myCanvas {
+    border: 1px solid black;
+} */
