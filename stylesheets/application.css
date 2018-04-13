@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: oldlace;
+    background: linear-gradient(#99ddff, white);
 }
 
 h1 {
@@ -15,7 +15,7 @@ h1 {
 .header {
     display: flex;
     justify-content: center;
-    border-bottom: 1px solid black;
+    /* border-bottom: 1px solid black; */
 }
 
 .header > h1 {
@@ -29,11 +29,22 @@ h1 {
 
 .canvas {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     margin: 16;
-    /* background-color: oldlace; */
+    /* background-image: url("http://res.cloudinary.com/dcf4iyb6t/image/upload/v1523654796/Flappy%20Sheen/clouds-background-light.jpg") */
+}
+
+.canvas > p {
+    font-family: "Press Start 2P", cursive;
+    font-size: 12px;
+    color: grey;
+    width: 30%;
+    text-align: center;
+    /* height: 400px; */
 }
 
 #myCanvas {
-    /* border: 1px solid black; */
+    border-style: ridge;
+    border-color: wheat;
+    border-width: 20px;
 }
