@@ -3,6 +3,10 @@
     src: url('../vendor/PressStart2P-Regular.ttf');
 }
 
+body {
+    background-color: oldlace;
+}
+
 h1 {
     font-family: 'Press Start 2P', cursive;
     color: grey;
@@ -11,6 +15,7 @@ h1 {
 .header {
     display: flex;
     justify-content: center;
+    border-bottom: 1px solid black;
 }
 
 .header > h1 {
@@ -22,6 +27,13 @@ h1 {
     width: 123px;
 }
 
-/* #myCanvas {
-    border: 1px solid black;
-} */
+.canvas {
+    display: flex;
+    justify-content: center;
+    margin: 16;
+    /* background-color: oldlace; */
+}
+
+#myCanvas {
+    /* border: 1px solid black; */
+}
