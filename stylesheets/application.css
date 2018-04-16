@@ -5,6 +5,9 @@
 
 body {
     background: linear-gradient(#99ddff, white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 h1 {
@@ -28,27 +31,23 @@ h1 {
 
 .canvas {
     display: flex;
-    justify-content: space-around;
-    margin: 16;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.canvas > p {
+.canvas p {
     font-family: "Press Start 2P", cursive;
-    font-size: 14px;
-    color: white;
-    width: 20%;
-    margin-top: 200px;
-    margin-bottom: 200px;
-    padding: 10px;
-    border: 1px solid black;
-    border-style: ridge;
-    border-color: lightskyblue;
-    border-width: 20px;
-    background-color: #007399;
+    font-size: 16px;
+    color: grey;
 }
 
 #myCanvas {
     border-style: ridge;
     border-color: wheat;
     border-width: 20px;
+}
+
+.text-div {
+    width: 580px;
+    margin-left: 100px;
 }
