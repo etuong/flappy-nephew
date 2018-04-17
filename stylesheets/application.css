@@ -35,7 +35,7 @@ h1 {
     align-items: center;
 }
 
-.canvas p {
+.instructions {
     font-family: "Press Start 2P", cursive;
     font-size: 16px;
     color: grey;
@@ -50,4 +50,15 @@ h1 {
 .text-div {
     width: 580px;
     margin-left: 100px;
+}
+
+.text-div > p {
+    margin-top: 50px;
+}
+
+.last-score-p, #last-score {
+    color: #ff6600;
+    font-family: "Press Start 2P", cursive;
+    font-size: 18px;
+    font-weight: bold;
 }
