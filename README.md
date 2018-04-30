@@ -2,7 +2,7 @@
 
 [Live Site](https://traciechang.github.io/flappy-sheen/)
 
-![alt text](http://res.cloudinary.com/dcf4iyb6t/image/upload/v1524097296/flappy-sheen.gif)
+![alt text](https://res.cloudinary.com/dcf4iyb6t/image/upload/v1524183871/Flappy%20Sheen/flappy-sheen.gif)
 
 A Flappy Bird clone built with Javascript and HTML5 Canvas.
 
