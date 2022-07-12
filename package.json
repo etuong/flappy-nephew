@@ -1,26 +1,19 @@
 {
-  "name": "flappy-sheen",
+  "name": "flappy-nephew",
   "version": "1.0.0",
-  "description": "",
+  "description": "Flappy Bird game forked and modified for my nephews",
   "main": "index.js",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "./node_modules/.bin/webpack --watch"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/traciechang/flappy-sheen.git"
+    "url": "git+https://github.com/etuong/flappy-nephew.git"
   },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/traciechang/flappy-sheen/issues"
-  },
-  "homepage": "https://github.com/traciechang/flappy-sheen#readme",
   "dependencies": {
     "webpack": "^4.5.0"
   },
