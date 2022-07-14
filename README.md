@@ -1,18 +1,22 @@
 # Flappy Sheen
 
-[Live Site](https://traciechang.github.io/flappy-sheen/)
+Play [here!!](https://etuong.github.io/flappy-nephew/)
 
-![alt text](https://res.cloudinary.com/dcf4iyb6t/image/upload/v1524183871/Flappy%20Sheen/flappy-sheen.gif)
+A Flappy Bird clone built with Javascript and HTML5 Canvas for my nephews. Forked from https://github.com/traciechang/flappy-sheen
 
-A Flappy Bird clone built with Javascript and HTML5 Canvas.
+You can change the default settings.
+
+<img src="./assets/settings.png" alt="drawing" width="300"/>
 
 ### How to Play
-Pusheen needs your help navigating through treacherous pipes. Tap your spacebar to keep this tubby kitty in the air and fly her as far as you can without hitting a pipe. 
+The boys need your help navigating through treacherous pipes. Tap your spacebar to keep them in the air and fly as far as you can without hitting a pipe. 
 
 ### Game Features
 * `Pipes` are randomly generated. Pusheen may need to ascend at one moment and take a nosedive the next.
 * Openings between pipes are unpredictable and can be spacious, narrow, or everything in between.
 * One point is rewarded for every set of pipes that Pusheen successfully passes through.
+
+![alt text](https://res.cloudinary.com/dcf4iyb6t/image/upload/v1524183871/Flappy%20Sheen/flappy-sheen.gif)
 
 ### Code Spotlight
 **The Pipe-Generating Algorithm**
@@ -28,8 +32,3 @@ Pusheen needs your help navigating through treacherous pipes. Tap your spacebar 
 * The height of the pipes and the space between each pair of pipes are randomly generated. 
 
 * Both have a set minimum and maximum height. A random height is first generated for the top pipe. Next, the `maxSpaceAvailable` is determined in order to generate a random `spaceHeight`. It will then `calculateBottomPipe` by subtracting `this.topPipeHeight` and `spaceHeight` from `this.canvasHeight`.
-
-### ToDo
-* Increase game difficulty by adding pipes more frequently and increasing pipe speed as players reach certain scores.
-* Add a Best Score.
-* Animate Pusheen with flapping wings.
