@@ -31,9 +31,52 @@
       </div>
 
       <div class="form-group">
+        <label>Gravity</label>
+        <input type="number" min="0.1" max="2" name="gravity" data-pristine-min-message="Must be between 0.1 and 2"
+          required class="form-control" value="1" />
+      </div>
+
+
+      <div class="form-group">
+        <label>Air Lift</label>
+        <input type="number" min="10" max="50" name="lift" data-pristine-min-message="Must be between 10 and 50"
+          required class="form-control" value="20" />
+      </div>
+
+      <div class="form-group">
+        <label>Frame Speed</label>
+        <input type="number" min="3" max="50" name="speed" data-pristine-min-message="Must be between 3 and 50" required
+          class="form-control" value="5" />
+      </div>
+
+      <div class="form-group">
         <label>Pipe Width</label>
         <input type="number" min="10" max="200" name="pipeWidth" data-pristine-min-message="Must be between 10 and 200"
           required class="form-control" value="100" />
+      </div>
+
+      <div class="form-group">
+        <label>Pipe Min Height</label>
+        <input type="number" min="10" max="200" name="minPipeHeight"
+          data-pristine-min-message="Must be between 10 and 200" required class="form-control" value="50" />
+      </div>
+
+      <div class="form-group">
+        <label>Pipe Max Height</label>
+        <input type="number" min="10" max="1000" name="maxPipeHeight"
+          data-pristine-min-message="Must be between 10 and 1000" required class="form-control" value="500" />
+      </div>
+
+      <div class="form-group">
+        <label>Gap Min Height</label>
+        <input type="number" min="10" max="200" name="minSpaceHeight"
+          data-pristine-min-message="Must be between 10 and 200" required class="form-control" value="160" />
+      </div>
+
+      <div class="form-group">
+        <label>Gap Max Height</label>
+        <input type="number" min="10" max="1000" name="maxSpaceHeight"
+          data-pristine-min-message="Must be between 10 and 1000" required class="form-control" value="240" />
       </div>
 
       <div class="form-group">
