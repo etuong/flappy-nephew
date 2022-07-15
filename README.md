@@ -8,6 +8,16 @@ You can change the default settings.
 
 <img src="./assets/settings.png" alt="drawing" width="300"/>
 
+* Gravity - How heavy you are dragged down
+* Air Lift - How light you can fly
+* Frame Speed - Speed of frame movement
+* Pipe Width- The width of the pipe
+* Pipe Min Height - The minimum height to the pipe
+* Pipe Max Height - The maximum height to the pipe
+* Gap Min Height - The minimum gap between the top and bottom pipes
+* Gap Max Height - The maximum gap between the top and bottom pipes
+* Fly With Love - Jump with soaring hearts
+
 ### How to Play
 The boys need your help navigating through treacherous pipes. Tap your spacebar to keep them in the air and fly as far as you can without hitting a pipe. 
 
