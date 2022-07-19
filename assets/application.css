@@ -4,6 +4,10 @@ body {
     display: flex;
 }
 
+.main-container {
+    margin: auto;
+}
+
 .canvas {
     display: none
 }
