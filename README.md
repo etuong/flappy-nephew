@@ -6,7 +6,7 @@ A Flappy Bird clone built with Javascript and HTML5 Canvas for my nephews. Forke
 
 You can change the default settings.
 
-<img src="./assets/settings.png" alt="drawing" width="300"/>
+<img src="./assets/images/settings.png" alt="drawing" width="300"/>
 
 * Gravity - How heavy you are dragged down
 * Air Lift - How light you can fly
