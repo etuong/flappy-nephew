@@ -1,100 +1,165 @@
 <html>
+  <head>
+    <title>Flappy Nephew</title>
+    <link rel="stylesheet" href="assets/css/application.css" />
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+  </head>
 
-<head>
-  <title>Flappy Nephew</title>
-  <link rel="stylesheet" href="assets/css/application.css" />
-  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
-  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
-</head>
+  <body>
+    <audio id="flyAudio" src="assets/audio/wing.mp3" autostart="false"></audio>
+    <audio id="hitAudio" src="assets/audio/hit.mp3" autostart="false"></audio>
+    <audio id="dieAudio" src="assets/audio/die.mp3" autostart="false"></audio>
 
-<body>
-  <audio id="flyAudio" src="assets/audio/wing.mp3" autostart="false"></audio>
-  <audio id="hitAudio" src="assets/audio/hit.mp3" autostart="false"></audio>
-  <audio id="dieAudio" src="assets/audio/die.mp3" autostart="false"></audio>
+    <canvas class="canvas" id="gameCanvas"></canvas>
 
-  <canvas class="canvas" id="gameCanvas"></canvas>
+    <div class="main-container" id="main-container">
+      <h1>Flappy Nephews - A Flappy Bird game for the bestest nephews.</h1>
+      <div class="form-container" \>
+        <h2>Settings</h2>
 
-  <div class="main-container" id="main-container">
-    <h1>Flappy Nephews - A Flappy Bird game for the bestest nephews.</h1>
-    <div class="form-container" \>
-      <h2>Settings</h2>
+        <form id="myForm" novalidate>
+          <input type="hidden" />
 
-      <form id="myForm" novalidate method="post">
-        <input type="hidden" />
+          <div class="form-group">
+            <label>Nephew</label>
+            <select required class="form-control" name="nephew">
+              <option value="">-----</option>
+              <option value="jaydon">Jaydon</option>
+              <option value="joseph">Joseph</option>
+            </select>
+          </div>
 
-        <div class="form-group">
-          <label>Nephew</label>
-          <select required class="form-control" name="nephew">
-            <option value="">-----</option>
-            <option value="jaydon">Jaydon</option>
-            <option value="joseph">Joseph</option>
-          </select>
-        </div>
+          <div class="form-group">
+            <label>Gravity</label>
+            <input
+              type="number"
+              min="0.1"
+              max="2"
+              name="gravity"
+              data-pristine-min-message="Must be between 0.1 and 2"
+              required
+              class="form-control"
+              value="1"
+            />
+          </div>
 
-        <div class="form-group">
-          <label>Gravity</label>
-          <input type="number" min="0.1" max="2" name="gravity" data-pristine-min-message="Must be between 0.1 and 2"
-            required class="form-control" value="1" />
-        </div>
+          <div class="form-group">
+            <label>Air Lift</label>
+            <input
+              type="number"
+              min="10"
+              max="50"
+              name="lift"
+              data-pristine-min-message="Must be between 10 and 50"
+              required
+              class="form-control"
+              value="20"
+            />
+          </div>
 
-        <div class="form-group">
-          <label>Air Lift</label>
-          <input type="number" min="10" max="50" name="lift" data-pristine-min-message="Must be between 10 and 50"
-            required class="form-control" value="20" />
-        </div>
+          <div class="form-group">
+            <label>Frame Speed</label>
+            <input
+              type="number"
+              min="3"
+              max="50"
+              name="speed"
+              data-pristine-min-message="Must be between 3 and 50"
+              required
+              class="form-control"
+              value="5"
+            />
+          </div>
 
-        <div class="form-group">
-          <label>Frame Speed</label>
-          <input type="number" min="3" max="50" name="speed" data-pristine-min-message="Must be between 3 and 50"
-            required class="form-control" value="5" />
-        </div>
+          <div class="form-group">
+            <label>Pipe Width</label>
+            <input
+              type="number"
+              min="10"
+              max="200"
+              name="pipeWidth"
+              data-pristine-min-message="Must be between 10 and 200"
+              required
+              class="form-control"
+              value="100"
+            />
+          </div>
 
-        <div class="form-group">
-          <label>Pipe Width</label>
-          <input type="number" min="10" max="200" name="pipeWidth"
-            data-pristine-min-message="Must be between 10 and 200" required class="form-control" value="100" />
-        </div>
+          <div class="form-group">
+            <label>Pipe Min Height</label>
+            <input
+              type="number"
+              min="10"
+              max="200"
+              name="minPipeHeight"
+              data-pristine-min-message="Must be between 10 and 200"
+              required
+              class="form-control"
+              value="50"
+            />
+          </div>
 
-        <div class="form-group">
-          <label>Pipe Min Height</label>
-          <input type="number" min="10" max="200" name="minPipeHeight"
-            data-pristine-min-message="Must be between 10 and 200" required class="form-control" value="50" />
-        </div>
+          <div class="form-group">
+            <label>Pipe Max Height</label>
+            <input
+              type="number"
+              min="10"
+              max="1000"
+              name="maxPipeHeight"
+              data-pristine-min-message="Must be between 10 and 1000"
+              required
+              class="form-control"
+              value="500"
+            />
+          </div>
 
-        <div class="form-group">
-          <label>Pipe Max Height</label>
-          <input type="number" min="10" max="1000" name="maxPipeHeight"
-            data-pristine-min-message="Must be between 10 and 1000" required class="form-control" value="500" />
-        </div>
+          <div class="form-group">
+            <label>Gap Min Height</label>
+            <input
+              type="number"
+              min="10"
+              max="200"
+              name="minSpaceHeight"
+              data-pristine-min-message="Must be between 10 and 200"
+              required
+              class="form-control"
+              value="160"
+            />
+          </div>
 
-        <div class="form-group">
-          <label>Gap Min Height</label>
-          <input type="number" min="10" max="200" name="minSpaceHeight"
-            data-pristine-min-message="Must be between 10 and 200" required class="form-control" value="160" />
-        </div>
+          <div class="form-group">
+            <label>Gap Max Height</label>
+            <input
+              type="number"
+              min="10"
+              max="1000"
+              name="maxSpaceHeight"
+              data-pristine-min-message="Must be between 10 and 1000"
+              required
+              class="form-control"
+              value="240"
+            />
+          </div>
 
-        <div class="form-group">
-          <label>Gap Max Height</label>
-          <input type="number" min="10" max="1000" name="maxSpaceHeight"
-            data-pristine-min-message="Must be between 10 and 1000" required class="form-control" value="240" />
-        </div>
+          <div class="form-group inline-label">
+            <input id="heartCheckbox" type="checkbox" name="flyWithHeart" />
+            <label for="heartCheckbox">Fly With Love?</label><br />
+          </div>
 
-        <div class="form-group inline-label">
-          <input id="heartCheckbox" type="checkbox" name="flyWithHeart" />
-          <label for="heartCheckbox">Fly With Love?</label><br />
-        </div>
-
-        <div class="form-group">
-          <input type="submit" value="Play!" class="btn">
-        </div>
-      </form>
+          <div class="form-group">
+            <input type="submit" value="Play!" class="btn" />
+          </div>
+        </form>
+      </div>
     </div>
-  </div>
 
-  <script type="application/javascript" src="vendor/keymaster.js"></script>
-  <script type="application/javascript" src="dist/lib/bundle.js"></script>
-  <script src="assets/js/pristine.min.js" type="text/javascript"></script>
-
-</body>
-
+    <script type="application/javascript" src="vendor/keymaster.js"></script>
+    <script type="module" src="lib/pipe.js"></script>
+    <script type="module" src="lib/flappy_sheen.js"></script>
+    <script type="module" src="lib/sheen.js"></script>
+    <script type="module" src="lib/game_view.js"></script>
+    <script type="module" src="lib/game.js"></script>
+    <script src="assets/js/pristine.min.js" type="text/javascript"></script>
+  </body>
 </html>
